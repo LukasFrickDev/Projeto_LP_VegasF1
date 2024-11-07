@@ -1,0 +1,202 @@
+@use 'variables';
+
+.tickets {
+    padding: 16px 0;
+
+    
+    &__details {    
+
+        
+        &__title {
+            padding-bottom: 10px;
+            padding-top: 20px ;
+            font-family: variables.$fonteFormula1;
+            font-weight: 700;
+            font-size: 18px;
+            
+            &--general {
+                color: variables.$colorPink ; 
+            }
+            
+            &--arquibancada {
+                color: variables.$colorGreen ; 
+            }
+
+            &--hospitalidade {
+                color: variables.$colorBlue ; 
+            }
+
+            &--parceiro {
+                color: variables.$colorPurple ; 
+            }
+
+            &--loja-oficial {
+                color: #fff ; 
+            }
+        }
+
+        &__content {
+            display: flex;
+            padding: 80px 0;
+            gap: 40px;
+            margin-bottom: 20px;
+            
+            &--general {
+                border-bottom: 2px solid variables.$colorPink;
+                border-top: 2px solid variables.$colorPink;
+                background-image: linear-gradient(to bottom, transparent, transparent 95%, variables.$colorPink 100%, transparent 100%);
+            }
+            
+            &--arquibancada {
+                border-bottom: 2px solid variables.$colorGreen;
+                border-top: 2px solid variables.$colorGreen; 
+                background-image: linear-gradient(to bottom, transparent, transparent 95%, variables.$colorGreen 100%, transparent 100%);
+
+            }
+
+            &--hospitalidade {
+                border-bottom: 2px solid variables.$colorBlue;
+                border-top: 2px solid variables.$colorBlue;
+                background-image: linear-gradient(to bottom, transparent, transparent 95%, variables.$colorBlue 100%, transparent 100%);
+
+            }
+
+            &--parceiro {
+                border-bottom: 2px solid variables.$colorPurple;
+                border-top: 2px solid variables.$colorPurple;
+                background-image: linear-gradient(to bottom, transparent, transparent 95%, variables.$colorPurple 100%, transparent 100%);
+
+            }
+
+            &--loja-oficial {
+                border-bottom: 2px solid #fff;
+                border-top: 2px solid #fff;
+                background-image: linear-gradient(to bottom, transparent, transparent 95%, #fff 100%, transparent 100%);
+
+            }
+
+            &__img {
+                background-image: url(../images/generaladmission.webp);
+                background-size: cover;
+                background-position: 0%;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 200px;
+                margin: 0;
+                padding: 0;
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(#000,.6);
+                    content: '';
+                }
+
+                &--general {
+                    background-image: url(../images/generaladmission.webp);
+                }
+                
+                &--arquibancada {
+                    background-image: url(../images/arquibancada.jpg);
+
+                }
+    
+                &--hospitalidade {
+                    background-image: url(../images/hospitalidade.webp);
+
+                }
+    
+                &--parceiro {
+                    background-image: url(../images/pareciros.jpg);
+
+                }
+    
+                &--loja-oficial {
+                    background-image: url(../images/lojas.jpg);
+
+                }
+
+                p {
+                    font-family: variables.$fonteFormula1;
+                    font-weight: bold;
+                    font-size: 35px ;
+                    position: absolute;
+                    top: 35%;
+                    padding-left: 8px;
+                }
+            }
+
+            &__item {
+                font-size: 16px;
+                max-width: 530px;
+                width: 100%;
+
+                p {
+
+                    margin-bottom: 50px;
+
+                    a {
+                        color: variables.$colorRed;
+                        text-decoration: none;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    @media (max-width: 640px) {
+
+        &__details {
+            &__content {
+                display: block;
+                padding: 40px 0;
+                
+
+                &__item{
+                    p {
+                        margin-top: 20px;
+                    }  
+                }
+            }
+
+        }
+
+        .button {
+            width: 100%;
+        }
+        
+    }
+
+    @media (max-width:1024px) {
+
+        &__details {
+            &__title{
+                font-size: 16px;
+            }
+
+            &__content {
+
+                &__img {
+
+                    p {
+                        font-size: 26px;
+                    }
+                }
+
+                &__item {
+                    font-size: 12px;
+                }
+            }
+        }
+        
+    }
+}

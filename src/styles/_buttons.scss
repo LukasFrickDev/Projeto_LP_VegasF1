@@ -1,0 +1,61 @@
+@use 'variables';
+
+.button {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+    transition: .5s;
+    padding: 6px 60px;
+    background-color: transparent;
+    text-transform: uppercase;
+
+    &:hover {
+        border: 2px solid #fff;
+        background-color: rgba(#fff,.3);
+        color: #fff;
+        transition: .5s;
+    }
+    &--primary {
+
+        color: #fff;
+        background-color: variables.$colorRed;
+        border: 2px solid variables.$colorRed;
+        text-transform: none;
+
+        &:hover {
+            background-color: transparent;
+            transition: .5s;
+
+        }
+        
+    }
+
+    &--secundary {
+        color: variables.$colorPink;
+        border: 2px solid variables.$colorPink;
+    }
+
+    &--third {
+        color: variables.$colorGreen;
+        border: 2px solid variables.$colorGreen;
+    }
+    &--four {
+        color: variables.$colorBlue;
+        border: 2px solid variables.$colorBlue;
+    }
+    &--five {
+        color: variables.$colorPurple;
+        border: 2px solid variables.$colorPurple;
+    }
+    &--six {
+        color: #fff;
+        border: 2px solid #fff;
+    }
+
+    @media (max-width:640px) {
+        display: block;
+        width: 100%;       
+    }
+}
